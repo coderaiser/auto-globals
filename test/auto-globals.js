@@ -2,6 +2,7 @@
 
 const test = require('tape');
 const autoGlobals = require('..');
+const {create} = autoGlobals;
 
 const noop = () => {};
 
@@ -23,6 +24,14 @@ test('auto-globals', (t) => {
     });
     
     t.ok(called, 'should call addEventListener');
+    t.end();
+});
+
+test('auto-globals: create: querySelector', (t) => {
+    const el = create();
+    el.querySelector('hello');
+    
+    t.ok(el.querySelector.calledWith('hello'), 'should call querySelector');
     t.end();
 });
 
