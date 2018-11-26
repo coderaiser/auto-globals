@@ -12,11 +12,11 @@ test('auto-globals: create: querySelector', (t) => {
     t.end();
 });
 
-test('auto-globals: create: getAttributes', (t) => {
+test('auto-globals: create: getAttribute', (t) => {
     const el = create();
-    el.getAttributes.returns('hello');
+    el.getAttribute.returns('hello');
     
-    const result = el.getAttributes();
+    const result = el.getAttribute();
     
     t.equal(result, 'hello', 'should equal');
     t.end();
