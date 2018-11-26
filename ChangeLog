@@ -1,3 +1,9 @@
+2018.11.26, v1.3.0
+
+feature:
+- (auto-globals) add support of activeElement
+
+
 2018.11.26, v1.2.1
 
 fix:
