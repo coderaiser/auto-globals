@@ -69,3 +69,46 @@ test('auto-globals: FormData', (t) => {
     t.end();
 });
 
+test('auto-globals: navigator: serviceWorker: register', (t) => {
+    const tape = (str, fn) => {
+        fn(t);
+    };
+    
+    const autoTest = autoGlobals(tape);
+    const f = () => {
+        global.navigator.serviceWorker.register();
+    };
+    
+    let called = false;
+    
+    autoTest('hello', (t, {navigator}) => {
+        f();
+        
+        called = navigator.serviceWorker.register.called;
+    });
+    
+    t.ok(called, 'should call serviceWorker.register');
+    t.end();
+});
+
+test('auto-globals: navigator: serviceWorker: unregister', (t) => {
+    const tape = (str, fn) => {
+        fn(t);
+    };
+    
+    const autoTest = autoGlobals(tape);
+    const f = () => {
+        global.navigator.serviceWorker.unregister();
+    };
+    
+    let called = false;
+    
+    autoTest('hello', (t, {navigator}) => {
+        f();
+        
+        called = navigator.serviceWorker.unregister.called;
+    });
+    
+    t.ok(called, 'should call serviceWorker.register');
+    t.end();
+});
