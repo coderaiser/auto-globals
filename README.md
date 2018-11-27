@@ -10,7 +10,7 @@
 [CoverageURL]:              https://coveralls.io/github/coderaiser/auto-globals?branch=master
 [CoverageIMGURL]:           https://coveralls.io/repos/coderaiser/auto-globals/badge.svg?branch=master&service=github
 
-Add browser globals on every test, and remove after it is done.
+Add browser globals on every test, and remove when it is done.
 
 ## Install
 
