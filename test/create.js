@@ -27,7 +27,15 @@ test('auto-globals: create: focus', (t) => {
     
     el.focus();
     
-    t.ok(el.focus.called, 'hello', 'should equal');
+    t.ok(el.focus.called, 'should call focus');
     t.end();
 });
 
+test('auto-globals: create: setSelectionRange', (t) => {
+    const el = create();
+    
+    el.setSelectionRange();
+    
+    t.ok(el.setSelectionRange.called, 'should call setSelectionRange');
+    t.end();
+});
