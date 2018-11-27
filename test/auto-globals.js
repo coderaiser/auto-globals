@@ -112,3 +112,22 @@ test('auto-globals: navigator: serviceWorker: unregister', (t) => {
     t.ok(called, 'should call serviceWorker.register');
     t.end();
 });
+
+test('auto-globals: location', (t) => {
+    const tape = (str, fn) => {
+        fn(t);
+    };
+    
+    const autoTest = autoGlobals(tape);
+    const f = () => {
+        global.location.protocol = 'http:';
+    };
+    
+    let is = false;
+    
+    autoTest('hello', (t, {location}) => {
+        f();
+        t.equal(location.protocol, 'http:', 'should equal');
+        t.end();
+    });
+});
