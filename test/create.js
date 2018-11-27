@@ -22,3 +22,12 @@ test('auto-globals: create: getAttribute', (t) => {
     t.end();
 });
 
+test('auto-globals: create: focus', (t) => {
+    const el = create();
+    
+    el.focus();
+    
+    t.ok(el.focus.called, 'hello', 'should equal');
+    t.end();
+});
+
