@@ -123,7 +123,6 @@ test('auto-globals: location', (t) => {
         global.location.protocol = 'http:';
     };
     
-    let is = false;
     
     autoTest('hello', (t, {location}) => {
         f();

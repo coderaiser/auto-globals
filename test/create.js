@@ -39,3 +39,12 @@ test('auto-globals: create: setSelectionRange', (t) => {
     t.ok(el.setSelectionRange.called, 'should call setSelectionRange');
     t.end();
 });
+
+test('auto-globals: create: contains', (t) => {
+    const el = create();
+    
+    el.classList.contains('hello');
+    
+    t.ok(el.classList.contains.calledWith('hello'), 'should call classList.contains');
+    t.end();
+});
