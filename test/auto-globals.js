@@ -130,3 +130,20 @@ test('auto-globals: location', (t) => {
         t.end();
     });
 });
+
+test('auto-globals: fetch', (t) => {
+    const tape = (str, fn) => {
+        fn(t);
+    };
+    
+    const autoTest = autoGlobals(tape);
+    
+    autoTest('hello', async (t, {fetch}) => {
+        const res = await fetch('/hello');
+        const text = await res.text();
+    
+        t.notOk(text, 'should get fetch text');
+        t.end();
+    });
+});
+
