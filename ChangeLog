@@ -1,3 +1,10 @@
+2019.05.24, v1.9.0
+
+feature:
+- (package) nyc v14.1.1
+- (auto-globals) add support of fetch text
+
+
 2018.11.27, v1.8.0
 
 feature:
