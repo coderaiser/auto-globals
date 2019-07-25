@@ -1,8 +1,7 @@
 'use strict';
 
-const test = require('tape');
+const test = require('supertape');
 const {create} = require('..');
-
 
 test('auto-globals: create: querySelector', (t) => {
     const el = create();

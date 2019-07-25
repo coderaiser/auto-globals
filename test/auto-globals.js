@@ -1,6 +1,6 @@
 'use strict';
 
-const test = require('tape');
+const test = require('supertape');
 const autoGlobals = require('..');
 
 const noop = () => {};
@@ -123,7 +123,6 @@ test('auto-globals: location', (t) => {
         global.location.protocol = 'http:';
     };
     
-    
     autoTest('hello', (t, {location}) => {
         f();
         t.equal(location.protocol, 'http:', 'should equal');
@@ -141,7 +140,7 @@ test('auto-globals: fetch', (t) => {
     autoTest('hello', async (t, {fetch}) => {
         const res = await fetch('/hello');
         const text = await res.text();
-    
+        
         t.notOk(text, 'should get fetch text');
         t.end();
     });
