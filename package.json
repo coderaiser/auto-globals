@@ -1,6 +1,6 @@
 {
   "name": "auto-globals",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "add browser globals on every test and remove when it is done",
   "homepage": "http://github.com/coderaiser/auto-globals",
