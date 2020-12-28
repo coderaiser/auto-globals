@@ -7,7 +7,7 @@ test('auto-globals: create: querySelector', (t) => {
     const el = create();
     el.querySelector('hello');
     
-    t.ok(el.querySelector.calledWith('hello'), 'should call querySelector');
+    t.calledWith(el.querySelector, ['hello'], 'should call querySelector');
     t.end();
 });
 
@@ -44,6 +44,6 @@ test('auto-globals: create: contains', (t) => {
     
     el.classList.contains('hello');
     
-    t.ok(el.classList.contains.calledWith('hello'), 'should call classList.contains');
+    t.calledWith(el.classList.contains, ['hello'], 'should call classList.contains');
     t.end();
 });

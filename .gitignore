@@ -1,4 +1,5 @@
 node_modules
 .nyc_output
-legacy
+yarn-error.log
 
+.putoutcache
