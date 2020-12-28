@@ -21,7 +21,7 @@
     "report": "madrun report"
   },
   "dependencies": {
-    "@cloudcmd/stub": "^2.1.0",
+    "@cloudcmd/stub": "^3.3.0",
     "currify": "^4.0.0"
   },
   "keywords": [
