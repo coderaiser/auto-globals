@@ -19,10 +19,26 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install Redrun, Lerna
-        run: npm i redrun lerna -g
+      - name: Install Redrun
+        run: npm i redrun
       - name: Lint
         run: redrun fix:lint
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+      - name: Typos Install
+        run: which typos || cargo install typos-cli
+      - name: Typos
+        run: typos --write-changes
       - name: Commit fixes
         uses: EndBug/add-and-commit@v9
         with:
