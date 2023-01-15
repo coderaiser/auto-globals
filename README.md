@@ -19,7 +19,7 @@ npm i auto-globals
 
 ```js
 const autoGlobals = require('auto-globals');
-const tape = autoGlobals(require('tape'));
+const tape = autoGlobals(require('supertape'));
 
 const fn = () => {
     document.body.addEventListener('click', console.log);
