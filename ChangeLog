@@ -1,3 +1,16 @@
+2023.01.15, v3.0.0
+
+feature:
+- package: madrun v9.0.7
+- package: eslint-plugin-putout v16.3.0
+- package: c8 v7.12.0
+- package: eslint-plugin-n v15.6.1
+- package: eslint v8.32.0
+- package: supertape v8.2.0
+- package: putout v28.5.0
+- package: @cloudcmd/stub v4.0.1
+- auto-globals-drop support of node < 16
+
 2020.12.28, v2.0.0
 
 feature:
