@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NAME: "@cloudcmd/auto-globals"
+      NAME: auto-globals
     strategy:
       matrix:
         node-version:
