@@ -5,7 +5,7 @@ const autoGlobals = require('..');
 
 const noop = () => {};
 
-test('auto-globals', (t) => {
+test('auto-globals: addEventListener', (t) => {
     const tape = (str, fn) => {
         fn(t);
     };
@@ -125,7 +125,8 @@ test('auto-globals: location', (t) => {
     
     autoTest('hello', (t, {location}) => {
         f();
-        t.equal(location.protocol, 'http:', 'should equal');
+        
+        t.equal(location.protocol, 'http:');
         t.end();
     });
 });

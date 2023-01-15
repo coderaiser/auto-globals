@@ -17,7 +17,7 @@ test('auto-globals: create: getAttribute', (t) => {
     
     const result = el.getAttribute();
     
-    t.equal(result, 'hello', 'should equal');
+    t.equal(result, 'hello');
     t.end();
 });
 
