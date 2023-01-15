@@ -5,6 +5,7 @@
   "description": "add browser globals on every test and remove when it is done",
   "homepage": "http://github.com/coderaiser/auto-globals",
   "main": "lib/auto-globals.js",
+  "commitType": "colon",
   "publishConfig": {
     "access": "public"
   },
@@ -21,7 +22,7 @@
     "report": "madrun report"
   },
   "dependencies": {
-    "@cloudcmd/stub": "^3.3.0",
+    "@cloudcmd/stub": "^4.0.1",
     "currify": "^4.0.0"
   },
   "keywords": [
