@@ -1,3 +1,12 @@
+2023.12.04, v3.1.0
+
+feature:
+- a80c109 auto-globals: skip
+- 6494616 auto-globals: nodemon v3.0.2
+- 1028dec auto-globals: eslint-plugin-n v16.3.1
+- 41b2123 auto-globals: eslint-plugin-putout v21.0.2
+- 844b38b auto-globals: putout v33.13.3
+
 2023.01.15, v3.0.0
 
 feature:
