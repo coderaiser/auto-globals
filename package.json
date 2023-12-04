@@ -40,7 +40,7 @@
     "eslint-plugin-putout": "^16.3.0",
     "madrun": "^9.0.7",
     "nodemon": "^2.0.6",
-    "putout": "^28.5.0",
+    "putout": "^33.13.3",
     "supertape": "^8.2.0"
   },
   "license": "MIT",
