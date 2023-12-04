@@ -19,6 +19,7 @@ test('auto-globals: addEventListener', (t) => {
         f();
         
         const {body} = document;
+        
         called = body.addEventListener.calledWith('click', noop);
     });
     
@@ -40,6 +41,7 @@ test('auto-globals: document: activeElement', (t) => {
         f();
         
         const {activeElement} = document;
+        
         called = activeElement.addEventListener.calledWith('click', noop);
     });
     
@@ -146,4 +148,3 @@ test('auto-globals: fetch', (t) => {
         t.end();
     });
 });
-

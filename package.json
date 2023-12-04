@@ -6,7 +6,6 @@
   "description": "add browser globals on every test and remove when it is done",
   "homepage": "http://github.com/coderaiser/auto-globals",
   "main": "lib/auto-globals.js",
-  "commitType": "colon",
   "publishConfig": {
     "access": "public"
   },
