@@ -1,3 +1,14 @@
+2024.03.12, v4.0.0
+
+feature:
+- ce89f3d auto-globals: add support of node v21
+- d2a9bdf auto-globals: drop support of node < 18
+- 19cc752 auto-globals: eslint-plugin-putout v22.4.1
+- 0daeb1f auto-globals: c8 v9.1.0
+- 64e4f25 auto-globals: supertape v10.4.0
+- f2a7bde auto-globals: putout v35.7.3
+- 36f71ab auto-globals: madrun v10.0.1
+
 2023.12.04, v3.1.0
 
 feature:
