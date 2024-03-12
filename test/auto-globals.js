@@ -148,4 +148,3 @@ test('auto-globals: fetch', (t) => {
         t.end();
     });
 });
-
