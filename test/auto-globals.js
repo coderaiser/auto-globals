@@ -152,7 +152,7 @@ test('auto-globals: fetch', (t) => {
     });
 });
 
-test('auto-globals: fetch: duble defineProperty', (t) => {
+test('auto-globals: fetch: double defineProperty', (t) => {
     const tape = (str, fn) => {
         fn(t);
     };
