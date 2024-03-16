@@ -4,6 +4,9 @@ const test = require('supertape');
 const autoGlobals = require('..');
 
 const noop = () => {};
+const CHECK = {
+    checkAssertionsCount: false,
+};
 
 test('auto-globals: addEventListener', (t) => {
     const tape = (str, fn) => {
@@ -148,3 +151,26 @@ test('auto-globals: fetch', (t) => {
         t.end();
     });
 });
+
+test('auto-globals: fetch: duble defineProperty', (t) => {
+    const tape = (str, fn) => {
+        fn(t);
+    };
+    
+    const autoTest1 = autoGlobals(tape);
+    const autoTest2 = autoGlobals(tape);
+    
+    autoTest1('hello 1', async (t, {fetch}) => {
+        const res = await fetch('/hello');
+        const text = await res.text();
+        
+        t.notOk(text, 'should get fetch text');
+    });
+    
+    autoTest2('hello 2', async (t, {fetch}) => {
+        const res = await fetch('/hello');
+        const text = await res.text();
+        
+        t.notOk(text, 'should get fetch text');
+    });
+}, CHECK);
